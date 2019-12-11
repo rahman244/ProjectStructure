@@ -1,5 +1,6 @@
 package testing;
 
+import WebElementsforHome.Home;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -13,26 +14,10 @@ public class HomeTest {
 
 
     @Test
-    public void setup(){
+    public void searchBoxTest(){
 
 
-        System.setProperty("webdriver.chrome.driver", "/Users/papia/Desktop/TestNGProject/DriversForBrowser/chromedriver");
-
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.amazon.com/");
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-
-
-
-
-
-        driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]")).sendKeys("Iphone");
-        driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]")).click();
-        driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]")).clear();
-
-
+        Home.searchBox();
 
 
 
